@@ -58,17 +58,16 @@ int main() {
     int tabuleiro[TAM_TAB][TAM_TAB] = {0};
     int cone[TAM_HAB][TAM_HAB], cruz[TAM_HAB][TAM_HAB], octaedro[TAM_HAB][TAM_HAB];
 
-    // Gera as matrizes de habilidade
     gerarCone(cone);
     gerarCruz(cruz);
     gerarOctaedro(octaedro);
 
-    // Aplica as habilidades em posições diferentes com espaçamento
-    aplicarHabilidade(tabuleiro, cone, 2, 2);       // Cone no canto superior esquerdo
-    aplicarHabilidade(tabuleiro, cruz, 2, 7);       // Cruz no canto superior direito
-    aplicarHabilidade(tabuleiro, octaedro, 7, 4);   // Octaedro na parte inferior central
+   
+    aplicarHabilidade(tabuleiro, cone, 2, 2);       
+    aplicarHabilidade(tabuleiro, cruz, 2, 7);       
+    aplicarHabilidade(tabuleiro, octaedro, 7, 4);   
 
-    // Imprime o tabuleiro com as habilidades aplicadas
+  
     printf("\n=== TABULEIRO COM HABILIDADES ===\n\n");
     imprimirTabuleiro(tabuleiro);
 
